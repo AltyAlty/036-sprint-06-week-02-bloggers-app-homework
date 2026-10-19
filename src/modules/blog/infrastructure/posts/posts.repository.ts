@@ -30,7 +30,7 @@ export class PostsRepository {
       .insert()
       .into(PostLikeData)
       .values(postLikeData)
-      .orUpdate(['like_status', 'addedAt'], ['id'])
+      .orUpdate(['like_status', 'added_at'], ['id'])
       .execute();
   }
 
