@@ -19,7 +19,7 @@ export class PostsRepository {
       .insert()
       .into(Post)
       .values(post)
-      .orUpdate(['title', 'short_description', 'content'], ['id'])
+      .orUpdate(['title', 'short_description', 'content', 'likes_count', 'dislikes_count'], ['id'])
       .execute();
   }
 
